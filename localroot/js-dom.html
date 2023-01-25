@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Workshop 3 Document Object Model</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <div class="w3-green w3-center">
+    <script language="javascript">
+    document.write("Document Object Model");
+    </script>
+  </div>
+<br>
+
+<style media="screen">
+  .myclass1 { color:#a991c3; }
+  .myclass2 { color:#e3c81c; }
+  .myclass3 { color:#e3c81c; font-size: 3em;}
+  .myclass4 { color:#124524; }
+</style>
+
+<div class="w3-light-gray">
+  <div>
+    <p class="myclass1" id="abc" onclick="{document.getElementById('abc').innerText='<h1>มหาวิทยาลัยเทคโนโลยีราชมงคล ---
+พระนคร</h1>'}" ondblclick="{document.getElementById('abc').innerHTML='<h1>Rajamangala Institute of --- Technology Phra Nakhon</h1>'}">Rajamangala Institute of Technology Phra Nakhon</p>
+  </div>
+  <div><p>คณะวิทยาศาสตร์และเทคโนโลยี</p></div>
+</div>
+
+<div class="w3-center w3-light-gray">
+  <a onclick="changefont()"><button>change color</button></a>
+  <a onclick="makesize()"><button>change size</button></a>
+  <a onclick="direct()"><button>direct to attribute</button></a>
+  <a onclick="{for (var i=0;i<document.getElementsByTagName('P').length;i++) {document.getElementsByTagName('P')[i].style.color='#cc6699';}}"><button>change
+all tag p</button></a>
+</div>
+<div class="w3-gray">
+  <div>
+    <ul id="myList">
+     <li class="item">1</li>
+     <li class="item">2</li>
+     <li class="item">3</li>
+     <li class="item">4</li>
+     <li class="item">5</li>
+    </ul>
+    <div class="w3-center"><button id="insertButton">Insert</button></div>
+  </div>
+</div>
+<br>
+<div id="myDiv" class="w3-light-green w3-center"></div>
+
+  <script type="text/javascript">
+  function settag(){
+  for (var i=0;i<document.getElementsByTagName("P").length;i++){
+      document.getElementsByTagName("P")[i].style.color="#ccffff";
+    }
+  }
+  </script>
+  <script>
+  function changefont(){
+    var a = document.getElementById("abc");
+    a.className = "myclass2"; }
+  function makesize(){
+    var a = document.getElementById("abc");
+    a.className = "myclass3"; }
+  function direct(){
+    var a = document.getElementById("abc");
+    a.style.backgroundColor = "red"; }
+
+  let myDiv = document.getElementById('myDiv');
+  myDiv.innerHTML = 'กำหนดค่าให้กับ Text บน Element';
+  let listItem = document.getElementsByClassName('item');
+  listItem[0].innerHTML = listItem.length + ' items';
+  listItem[1].style['color'] = '#FF0000';
+  listItem[2].style['background-color'] = '#FF0000';
+  let insertButton = document.getElementById('insertButton');
+  insertButton.addEventListener('click', function() {
+  alert('Click insert button!!!');
+  let newItem = document.createElement("li");
+  let text = document.createTextNode("new li item");
+  newItem.appendChild(text);
+  let myList = document.getElementById("myList");
+  myList.appendChild(newItem);
+  });
+  </script>
+</body>
+</html>

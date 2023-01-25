@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Workshop 3</title>
+
+<script language="javascript">
+function Hello()
+{  alert("Hello");  }
+</script>
+
+<script language="javascript">
+function ShowText()
+{  test = "Surachet";
+alert("Hello"+" "+test);  }
+
+function ConfirmDialog()
+{  var x=confirm("Are you sure you want to delete")
+if (x)
+    alert("Thank you.")
+else
+    alert("Good choice.")  }
+function ShowDialog()
+{ alert("Hello"); }
+</script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+  <div class="w3-amber w3-center">
+    <script language="javascript">
+    document.write("Hello World from JavaScript");
+    </script>
+  </div>
+
+<br>
+<div class="w3-light-gray w3-center">
+  <br>
+  <a class="w3-button w3-blue"  href="javascript:Hello()">Button 1</a>
+  <br><br>
+  <a class="w3-button w3-indigo"  href="javascript:ShowText()">Button 2</a>
+  <br><br>
+  <a class="w3-button w3-red" href="javascript:ConfirmDialog();">Button 3</a>
+  <br><br>
+ <a class="w3-button w3-green" href="#" onMouseOver="javascript:ShowDialog();"> ---
+                      Over</a>
+<br><br>
+  <script language="JavaScript">
+      var x= new Date();
+      document.write (x);
+  </script>
+   <br><br>
+  <a class="w3-button w3-amber" href="javascript:history.back()">Back</a>
+  <a class="w3-button w3-amber" href="javascript:window.print()">Print</a>
+  <a class="w3-button w3-amber" href="javascript:window.close()">Close</a>
+  <script>
+  function o()
+{ window.open("http://www.comsci-rmutp.com","popup","height=200,width=200, left=150,top=150,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"); }
+  </script>
+  <br><br>
+  <a onclick="o()"><button>comsci-rmutp.com</button></a>
+<a href="#" onclick={window.open("http://www.rmutp.ac.th","popup","height=400, width=800,left=150,top=150,toolbar=no,location=no,status=no,menubar=no,scrollbars=no, resizable=no")}><span class="w3-button w3-pink">go to rmutp.ac.th</span></a>
+  <br><br>
+</div>
+
+</body>
+</html>
